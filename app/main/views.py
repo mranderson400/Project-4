@@ -18,9 +18,9 @@ def index():
 
     # Check if the request was successful
     if response.status_code == 200:
-        # Parse the JSON response
+        # this parses the JSON response
         data = response.json()
-        recipes = data['results']  # Extract the array of recipe objects
+        recipes = data['results']  # This basically extracts the 'array' of recipe objects
 
         # Pass the recipe data to the template for rendering
         return render_template('main/index.html', recipes=recipes)
