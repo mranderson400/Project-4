@@ -1,0 +1,69 @@
+<!-- {% import 'macros/nav_macros.html' as nav %} -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'partials/_head.html' %}
+    {# Any templates that extend this template can set custom_head_tags to add scripts to their page #}
+    {% block custom_head_tags %}{% endblock %}
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            color: #343a40; /* Dark gray text color */
+        }
+
+        /* Styling for the header */
+        header {
+            background-color: #28a745; /* Green header background */
+            color: white; /* White text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Styling for the navigation menu */
+        nav {
+            background-color: #343a40; /* Dark gray navigation background */
+            color: white; /* White text color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Styling for the flashes */
+        .flash-message {
+            background-color: #dc3545; /* Red flash background */
+            color: white; /* White text color */
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Styling for the content */
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+{% block nav %}
+    {# add dropdown variable here to the render_nav method to render dropdowns #}
+    {{ nav.render_nav(current_user) }}
+{% endblock %}
+
+{% include 'partials/_flashes.html' %}
+{# When extended, the content block contains all the html of the webpage #}
+<main class="content">
+    {% block content %}
+    {% endblock %}
+</main>
+
+{# Implement CSRF protection for site #}
+{% if csrf_token()|safe %}
+    <div style="visibility: hidden; display: none">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token()|safe }}">
+    </div>
+{% endif %}
+</body>
+</html>
