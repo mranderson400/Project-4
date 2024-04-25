@@ -1,0 +1,163 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 15px; /* Increased font size for login text */
+    margin-top: 15px;
+}
+
+#settings-icon {
+    font-size: 36px; /* Increased icon size */
+    margin-bottom: 17px;
+    margin-left: 40px;
+    margin-right: 50px;
+    color: blue;
+}
+
+h1 {
+    margin-left: 100px;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif; 
+    color: blue; 
+    font-size: 24px; 
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    min-width: 200px; /* Increased dropdown width */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 18px; /* Increased dropdown item font size */
+    color: #007bff;
+    padding: 12px 24px; /* Increased padding for better touch target */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.tagline {
+    color: #757575; 
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px; 
+    letter-spacing: 0.5em; 
+    margin-left:139px;
+}
+
+
+.flex {
+    display: flex;
+}
+
+
+
+.carousel-item img {
+    max-height: 100%;  /* Maximum height of images */
+    width: auto;       /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of the carousel item without stretching */
+}
+
+/* Adjust the container of the carousel if necessary */
+.thisdiv {
+    height: 500px; /* Set a fixed height for the carousel container */
+    overflow: hidden; /* Hide overflowed content */
+    min-height: 300px;  /* Minimum height to ensure consistency */
+    max-height: 500px;  /* Maximum height to prevent it from being too large */
+    width: 100%;        /* Adjust width to full width of the container */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hello {
+    font-style: italic; 
+    color: black; 
+    font-size: 20px;
+    padding: 10px; 
+}
+.posts-div{
+
+}
+
+.imgs {
+    border: 2px solid gray;
+    margin: 20px; 
+    padding: 20px; 
+    height: 300px; 
+    width: 30%; 
+}
+
+.user-session{
+    color: #757575; 
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px; 
+    margin-left:100px;
+}
+
+.heart-icon svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    fill: rgba(0, 0, 0, 0);
+    stroke: #e84a43;
+    stroke-width: 2px;
+    transition: fill 250ms;
+}
+
+.heart-icon svg.active {
+    fill: #e84a43;
+}
+
+.create{
+    border: 2px solid gray;
+    margin-right: 200px;
+    margin-left: 100px;
+    height: 300px; 
+    width: 300px; 
+    padding: 40px;
+}
+.hr-linee {
+    width: 30px; 
+    border-color: #A9A9A9;
+    border-width: 1px; 
+    margin-left: 11px;
+}
+.icons{
+    width: 30px;
+    height: 30px; 
+}
+custom-comment-icon {
+    color: black;                 /* Sets the color of the border */
+    background-color: white;      /* Sets the background color inside the icon */
+    border: 2px solid black;      /* Adds a black border around the icon */
+    border-radius: 50%;           /* Optional: Rounds the corners for a more bubble-like appearance */
+    padding: 10px;                /* Adds space around the icon */
+    font-size: 24px
