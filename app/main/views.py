@@ -49,7 +49,7 @@ def search_recipes():
 
 
 
-@main.route('/about')
+""" @main.route('/about')
 def about():
-    return render_template('main/about.html')
+    return render_template('main/about.html') """
 
