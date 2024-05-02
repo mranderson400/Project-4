@@ -20,7 +20,7 @@
             </div>
 
             <div class="header">
-                <p>Login</p>
+                <p><a class="dropdown-item" href="/users/login">Login</a></p>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button">
                         <i id="settings-icon" class="material-icons">menu</i>
@@ -92,8 +92,17 @@
                     <img src="{{ recipe.image }}" class="card-img-top" alt="Recipe Image" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe.title }}</h5>
-                        <!-- Assuming 'instructions' and 'rating' are not directly available -->
-                        <p class="card-text"><strong>Instructions:</strong> Not Available</p>
+                        {% if recipe.analyzedInstructions %}
+                            <p class="card-text"><strong>Instructions:</strong></p>
+                            <ol>
+                                {% for step in recipe.analyzedInstructions[0].steps %}
+                                    <li>{{ step.step }}</li>
+                                {% endfor %}
+                            </ol>
+                        {% else %}
+                            <p class="card-text"><strong>Instructions:</strong> Not Available</p>
+                        {% endif %}
+                        <!-- Assuming 'rating' is not directly available -->
                         <p class="card-text"><strong>Rating:</strong> Not Available</p>
                     </div>
                 </div>
@@ -104,7 +113,6 @@
     {% else %}
     <p>No recipes found!</p>
     {% endif %}
-</div>
 
 
        <!-- USER POSTS -->
