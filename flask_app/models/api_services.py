@@ -2,7 +2,7 @@ import requests
 
 def search_recipes_api(title):
     """Searches for recipes via an external API using GET method."""
-    api_url = f'https://api.spoonacular.com/recipes/complexSearch?query={title}&apiKey=2c9a826eab7a408f9575ef4d3e9fe63a'
+    api_url = f'https://api.spoonacular.com/recipes/complexSearch?query={title}&apiKey=2c9a826eab7a408f9575ef4d3e9fe63a&addRecipeInformation=true&instructionsRequired=true'
     headers = {'Content-Type': 'application/json'}
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
