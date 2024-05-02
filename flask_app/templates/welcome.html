@@ -6,9 +6,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/welcome.css">
+    <!-- <link rel="stylesheet" href="/static/welcome.css">
     <link rel="stylesheet" href="/static/script.js">
-    
+     -->
     <title>RecipeBuilder</title>
 </head>
 <body>
@@ -36,13 +36,15 @@
         <!-- END OF NAV -->
 <div class="thisdiv">
                 {% include 'carousel.html' %}
-
 </div>
 
 <div class="flex">
 <div class="create">
 <h2 class="font">ADD YOUR OWN RECIEPE</h2>
-<button class="btn btn-primary">Create Recipe</button>
+<a href="/create" class="btn btn-primary">Create Recipe</a>
+
+</div>
+
 </div>
 
         <div class="flex">
@@ -59,19 +61,62 @@
                     <a href="https://www.facebook.com"><img class="icons" src="data:image/png;base64,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" alt="Facebook"></a>
                     <a href="https://www.youtube.com"><img class="icons" src="data:image/png;base64,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" alt="YouTube"></a>
                     <a href="https://www.instagram.com"><img class="icons" src="data:image/png;base64,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" alt="Instagram"></a>
-                     
+    
                 </div>
             </div>
             <div class="background-img">
             </div>
         </div>
     </div>
-        <!-- USER POSTS -->
+
+<!-- SEARCH API -->
+
+<div class="container mt-5">
+    <h1 class="mb-4">Recipe Search</h1>
+    <form action="/search_recipes" method="post" class="mb-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="recipe_title" placeholder="Enter Recipe Title..." required>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
+    {% if recipe_data %}
+    <div class="mt-4">
+        <h2>Recipe Details:</h2>
+        <div class="row">
+            {% for recipe in recipe_data.results[:3] %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="{{ recipe.image }}" class="card-img-top" alt="Recipe Image" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recipe.title }}</h5>
+                        <!-- Assuming 'instructions' and 'rating' are not directly available -->
+                        <p class="card-text"><strong>Instructions:</strong> Not Available</p>
+                        <p class="card-text"><strong>Rating:</strong> Not Available</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <p>No recipes found!</p>
+    {% endif %}
+</div>
+
+
+       <!-- USER POSTS -->
         <div class="posts-div">
             <div class="imgs">
-                <p class="user-session"> Created by: user session</p> 
+                
+                <p class="user-session"> Created by: {{session.first_name}}</p>
                 <img src="" alt="">
-                <p>Date:</p>
+                <p>{{session.title}}</p>
+                <p>{{session.instructions}}</p>
+                <p>{{session.review}}</p>
+                <p>{{session.date}}:</p>
                 <hr>
                 <i class="material-icons" id="custom-comment-icon">chat_bubble_outline</i>
 
@@ -100,3 +145,4 @@
 </script>
 
 </html>
+

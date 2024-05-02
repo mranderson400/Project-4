@@ -9,7 +9,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 15px; /* Increased font size for login text */
+    font-size: 15px; 
     margin-top: 15px;
 }
 
@@ -39,7 +39,7 @@ h1 {
     position: absolute;
     background-color: #f8f9fa;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    min-width: 200px; /* Increased dropdown width */
+    min-width: 200px; 
     z-index: 1;
 }
 
@@ -48,9 +48,9 @@ h1 {
 }
 
 .dropdown-item {
-    font-size: 18px; /* Increased dropdown item font size */
+    font-size: 18px; 
     color: #007bff;
-    padding: 12px 24px; /* Increased padding for better touch target */
+    padding: 12px 24px; 
     text-decoration: none;
     display: block;
 }
@@ -80,20 +80,19 @@ h1 {
 
 
 .carousel-item img {
-    max-height: 100%;  /* Maximum height of images */
-    width: auto;       /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area of the carousel item without stretching */
+    max-height: 100%; 
+    width: auto;       
+    object-fit: cover; 
 }
 
-/* Adjust the container of the carousel if necessary */
 .thisdiv {
-    height: 500px; /* Set a fixed height for the carousel container */
-    overflow: hidden; /* Hide overflowed content */
-    min-height: 300px;  /* Minimum height to ensure consistency */
-    max-height: 500px;  /* Maximum height to prevent it from being too large */
-    width: 100%;        /* Adjust width to full width of the container */
+    height: 500px; 
+    overflow: hidden; 
+    min-height: 300px;  
+    max-height: 500px;  
+    width: 100%;        
     display: flex;
-    align-items: center; /* Centers content vertically */
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -155,9 +154,9 @@ h1 {
     height: 30px; 
 }
 custom-comment-icon {
-    color: black;                 /* Sets the color of the border */
-    background-color: white;      /* Sets the background color inside the icon */
-    border: 2px solid black;      /* Adds a black border around the icon */
-    border-radius: 50%;           /* Optional: Rounds the corners for a more bubble-like appearance */
-    padding: 10px;                /* Adds space around the icon */
+    color: black;                 
+    background-color: white;
+    border: 2px solid black;      
+    border-radius: 50%;            
+    padding: 10px;                
     font-size: 24px

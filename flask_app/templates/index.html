@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        /* Basic Styling */
+        .text-danger { color: red; }
+        .mg-3 { margin: 10px; }
+        .btn-primary { color: white; background-color: blue; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; }
+        label { display: block; }
+        input[type=text], input[type=password] { width: 100%; padding: 7px; margin: 5px 0; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <h1>Welcome GENTS</h1>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-6">
+                <!-- Registration Form -->
+                {% for message in get_flashed_messages() %}
+                    <p class="text-danger">{{ message }}</p>
+                {% endfor %}
+                <h2>Register</h2>
+                <form action="/" method="post">
+                    <div class="mg-3">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" required>
+                    </div>
+                    <div class="mg-3">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" required>
+                    </div>
+                    <div class="mg-3">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div class="mg-3">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="mg-3">
+                        <label for="conf_pass">Confirm Password</label>
+                        <input type="password" name="conf_pass" id="conf_pass" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <!-- Login Form -->
+                {% for message in get_flashed_messages(category_filter=['log']) %}
+                    <p class="text-danger">{{ message }}</p>
+                {% endfor %}
+                <h2>Login</h2>
+                <form action="/users/login" method="post">
+                    <div class="mg-3">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div class="mg-3">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
