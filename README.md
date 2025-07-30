@@ -1,4 +1,4 @@
-# Project-4
+# EverythingYouWant
 Primary Pages
 Login: Utilize Material-UI for login and styling.
 Home: Main landing page after login.
